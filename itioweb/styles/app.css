@@ -20,7 +20,7 @@ p {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
-	height: 100px;
+	height: 200px;
 	width: 900px;
 	text-align: center;
 	background: url(../img/header.jpg) no-repeat;
@@ -124,7 +124,6 @@ p {
 
 a, a:visited, a:hover{
 	color: white;
-	text-decoration: none;
 }
 
 #news img{
