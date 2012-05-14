@@ -1,0 +1,23 @@
+<h1>Listing address_cats</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @address_cats.each do |address_cat| %>
+  <tr>
+    <td><%= address_cat.name %></td>
+    <td><%= link_to 'Show', address_cat %></td>
+    <td><%= link_to 'Edit', edit_address_cat_path(address_cat) %></td>
+    <td><%= link_to 'Destroy', address_cat, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Address cat', new_address_cat_path %>

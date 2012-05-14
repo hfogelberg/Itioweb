@@ -1,0 +1,21 @@
+<br />
+<ul class="nav nav-list">
+  <li class="active">
+    <%= link_to "Hem", "home" %>
+  </li>
+  <li class="nav-header">
+		<% if !@selected_dog.blank? %>
+			<%= @selected_dog.name %>
+		<% end %>
+	</li>
+	<% if !@selected_dog.blank? %>
+		<% if !@selected_dog.Breeder_id.blank? %>
+			<li><%= link_to "Uppfödare", dog_breeder_path(@selected_dog.id) %></li>
+		<% else %>
+			<li><%= link_to "Lägg till uppfödare", new_dog_address_path(@selected_dog.id)%>
+		<% end %>
+		<li><a href="#">Försäkringsbolag</a></li>
+		<li class="nav-header">Verktyg</li>
+		<li><%= link_to "Adresser", addresses_path %></li>
+	<% end %>
+</ul>

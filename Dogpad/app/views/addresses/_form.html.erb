@@ -1,0 +1,22 @@
+<%= simple_form_for(@address) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :company %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :street %>
+    <%= f.input :zip %>
+    <%= f.input :city %>
+    <%= f.input :country %>
+    <%= f.input :phone %>
+    <%= f.input :mobile %>
+    <%= f.input :mail %>
+    <%= f.input :web %>
+    <%= f.association :AddressCat %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
