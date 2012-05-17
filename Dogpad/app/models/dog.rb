@@ -2,7 +2,8 @@ class Dog < ActiveRecord::Base
   belongs_to :Gender
   belongs_to :Nutered
   belongs_to :Breeder
-  attr_accessible :breed, :dob, :dod, :height, :weight, :name, 
+  
+  attr_accessible :breed, :dob, :dod, :height, :weight, :name, :Breeder_id,
                   :Gender_id, :Nutered_id, :Gender, :Nutered
   
   validates :name, :presence=>true

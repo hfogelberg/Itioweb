@@ -1,11 +1,14 @@
 Dogpad::Application.routes.draw do
   
+  resources :breeders
+
   resources :addresses
 
   resources :address_cats
 
   resources :dogs do
     resources :addresses
+    resources :breeders
   end
 
   root :to=>'home#index', :as=>"home"

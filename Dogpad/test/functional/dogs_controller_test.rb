@@ -21,7 +21,8 @@ class DogsControllerTest < ActionController::TestCase
       post :create, dog: { breed: @dog.breed, dob: @dog.dob, dod: @dog.dod, height: @dog.height, name: @dog.name }
     end
 
-    assert_redirected_to dog_path(assigns(:dog))
+    id = @dog.id + 1
+    assert_redirected_to edit_dog_path(id)
   end
 
   test "should show dog" do

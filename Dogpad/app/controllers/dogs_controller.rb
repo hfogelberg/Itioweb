@@ -45,7 +45,7 @@ class DogsController < ApplicationController
 
     respond_to do |format|
       if @dog.save
-        format.html { redirect_to @dog, notice: 'Dog was successfully created.' }
+        format.html { redirect_to edit_dog_path(@dog) }
         format.json { render json: @dog, status: :created, location: @dog }
       else
         format.html { render action: "new" }

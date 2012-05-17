@@ -9,7 +9,8 @@ class DogTest < ActiveSupport::TestCase
                   :dob => (Date.today - 10.years),
                   :dod => Date.today, 
                   :Gender => genders(:one),
-                  :Nutered => nutereds(:two))
+                  :Nutered => nutereds(:two),
+                  :Breeder_id => breeders(:one))
     assert a.save
   end
   

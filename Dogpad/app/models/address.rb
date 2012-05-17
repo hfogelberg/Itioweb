@@ -1,5 +1,7 @@
 class Address < ActiveRecord::Base
   belongs_to :AddressCat
+  has_many :Breeders
+  
   attr_accessible :city, :company, :country, :first_name, :last_name, 
                   :mail, :mobile, :phone, :street, :web, :zip, :AddressCat_id, :AddressCat
                   

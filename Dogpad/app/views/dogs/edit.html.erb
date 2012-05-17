@@ -1,13 +1,3 @@
 <h1><%=@dog.name%></h1>
 
-<ul class="nav nav-tabs">
-  <li class="active">
-    <a href="#">Hund</a>
-  </li>
-  <li><a href="#">Identification</a></li>
-  <li><a href="#">Plupp</a></li>
-</ul>
 <%= render 'form' %>
-
-<%= link_to 'Show', @dog %> |
-<%= link_to 'Back', dogs_path %>
